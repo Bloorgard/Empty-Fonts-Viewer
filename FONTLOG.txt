@@ -1,0 +1,40 @@
+FONTLOG for the VTF Viewer font
+===============================
+
+This file provides detailed information on the VTF Viewer font family.
+This information should be distributed along with the VTF Viewer fonts
+and any derivative works.
+
+
+Basic Font Information
+----------------------
+
+VTF Viewer is an experimental display typeface by Pustota, supporting
+Latin and Cyrillic. It is developed in Glyphs and distributed here in
+OTF and web (WOFF, WOFF2) formats.
+
+
+ChangeLog
+---------
+
+7 Jul 2026 (Pustota)  VTF Viewer v0.008
+- Latest working version
+- Cleaned repository structure, added README and OFL license
+
+11 Feb 2026 (Pustota)  VTF Viewer v0.007
+15 Jan 2026 (Pustota)  VTF Viewer v0.006
+24 Nov 2025 (Pustota)  VTF Viewer v0.005
+- Earlier working versions (see git history for details)
+
+
+Acknowledgements
+----------------
+
+If you make modifications be sure to add your name (N), email (E),
+web-address (if you have one) (W) and description (D). This list is in
+alphabetical order.
+
+N: Pustota
+E: peter@pustota.name
+W: https://pustota.name
+D: Designer and maintainer

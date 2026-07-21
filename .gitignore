@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Glyphs app
+*.glyphs~
+*(Autosaved).glyphs
+Backups/
+
+# Build / temp
+build/
+instance_ufos/
+master_ufo/
+*.tmp
+dist/
+*.zip

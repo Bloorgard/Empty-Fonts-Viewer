@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VTF Viewer — Specimen</title>
+<style>
+  @font-face {
+    font-family: "VTF Viewer";
+    src: url("fonts/VTFViewer-Regular.woff2") format("woff2"),
+         url("fonts/VTFViewer-Regular.woff")  format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --bg: #111113;
+    --fg: #f0eee8;
+    --dim: #78787d;
+    --accent: #e85a3c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, system-ui, sans-serif;
+    padding: clamp(24px, 6vw, 90px);
+    line-height: 1.15;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .meta {
+    font-size: 13px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 28px;
+  }
+  .viewer { font-family: "VTF Viewer", serif; }
+  .hero {
+    font-size: clamp(64px, 18vw, 220px);
+    line-height: .95;
+    outline: none;
+  }
+  hr {
+    border: 0;
+    height: 2px;
+    background: var(--accent);
+    margin: 40px 0;
+  }
+  .row {
+    font-size: clamp(28px, 6vw, 72px);
+    margin: .1em 0;
+    outline: none;
+  }
+  .dim { color: var(--dim); }
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 24px;
+    font-size: 13px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  input[type=range] { accent-color: var(--accent); width: 220px; max-width: 50vw; }
+  .charset {
+    font-size: clamp(20px, 4vw, 40px);
+    color: var(--dim);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  footer {
+    margin-top: 64px;
+    font-size: 13px;
+    color: var(--dim);
+    letter-spacing: .04em;
+  }
+  footer a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  .hint { font-size: 12px; color: var(--dim); text-transform: none; letter-spacing: 0; }
+</style>
+</head>
+<body>
+  <div class="meta">Pustota · Display Typeface · v0.008 · OFL 1.1</div>
+
+  <div class="viewer hero" contenteditable="true" spellcheck="false">VIEWER</div>
+
+  <hr>
+
+  <div class="viewer row" contenteditable="true" spellcheck="false">Пустота Viewer Штучка</div>
+  <div class="viewer row" contenteditable="true" spellcheck="false">СЕВЕРНЫЙ ВЕТТЕР · GAME OVER</div>
+  <div class="viewer row dim" contenteditable="true" spellcheck="false">The quick brown fox jumps over the lazy dog</div>
+
+  <div class="controls">
+    <span>Size</span>
+    <input type="range" min="24" max="220" value="96" id="size">
+    <span class="hint">— all lines above are editable, click and type</span>
+  </div>
+  <div class="viewer" id="tester" contenteditable="true" spellcheck="false"
+       style="font-size:96px; line-height:1.05; outline:none;">Любя, съешь щипцы</div>
+
+  <hr>
+
+  <div class="viewer charset">АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</div>
+
+  <footer>
+    VTF Viewer · © 2024 Pustota ·
+    <a href="https://github.com/Bloorgard/Empty-Fonts-Viewer">GitHub</a> ·
+    <a href="https://pustota.name">pustota.name</a>
+  </footer>
+
+  <script>
+    const s = document.getElementById('size');
+    const t = document.getElementById('tester');
+    s.addEventListener('input', () => t.style.fontSize = s.value + 'px');
+  </script>
+</body>
+</html>
